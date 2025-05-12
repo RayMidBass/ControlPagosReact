@@ -7,8 +7,7 @@ import Notifications from './components/Notifications';
 import Reports from './components/Reports';
 import Navbar from './components/Navbar';
 
-// Simulación de autenticación básica
-// En una app real, se puede usar contexto o auth provider
+// Simulación de autenticación básica (esto puede ser mejorado con un contexto real o proveedor de autenticación)
 const isAuthenticated = true;
 
 // Componente para rutas privadas
@@ -25,7 +24,7 @@ export default function App() {
           {/* Ruta pública */}
           <Route path="/" element={<Home />} />
 
-          {/* Rutas protegidas */}
+          {/* Rutas privadas (solo accesibles si el usuario está autenticado) */}
           <Route
             path="/payments"
             element={
@@ -55,4 +54,3 @@ export default function App() {
     </Router>
   );
 }
-
